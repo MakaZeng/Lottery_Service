@@ -8,8 +8,7 @@ import Apps.JSKS.Crawser as JSKSCrawser
 import Apps.TJSSC.Crawser as TJSSCCrawser
 import Apps.XYFT.Crawser as XYFTCrawser
 import Apps.XYNC.Crawser as XYNCCrawser
-
-from Apps import XJSSC as XJSSCCrawser
+import Apps.XJSSC.Crawser as XJSSCCrawser
 
 reload(sys)
 sys.setdefaultencoding('utf-8')
