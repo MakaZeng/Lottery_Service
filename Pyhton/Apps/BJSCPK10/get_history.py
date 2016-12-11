@@ -1,6 +1,6 @@
 
-import Dao.MysqlDBManager as MysqlDBManager
-import Network.NetworkManager as NetworkManager
+import Dao.MysqlDBManager as DBM
+import Network.NetworkManager as NM
 import time
 import MysqlDBConfig as CF
 from pyquery import PyQuery as pyq
@@ -15,7 +15,7 @@ startNumber = 591305
 currentNumber = startNumber
 
 url = 'http://www.bwlc.net/bulletin/prevtrax.html?num={0}'.format(currentNumber)
-content = NetworkManager.getcontent(url)
+content = NM.getcontent(url)
 if len(content):
     jq = pyq(content)
     content = jq('.tb td').text()
@@ -31,7 +31,7 @@ if len(content):
         CF.HISN9, CF.HISN10, \
         qishu, shijian, str(row[0]), str(row[1]), str(row[2]), str(row[3]), str(row[4]), str(row[5]),
         str(row[6]), str(row[7]), str(row[8]), str(row[9]))
-    MysqlDBManager.maka_do_sql(sql)
+    DBM.maka_do_sql(sql)
 
     time.sleep(1)
     currentNumber -= 1
