@@ -42,7 +42,7 @@ class Crawser(object):
 
         sql = "select {0} from {1} order by {2} limit 1".format(CF.HISTIME, CF.HISTAB, CF.HISQI)
         result = DBM.maka_do_sql(sql)
-        lastTime = result[0]
+        lastTime = result[0][0]
         print  lastTime
         lastTimeSeconds = DU.date_to_time(lastTime)
         if current - lastTimeSeconds >= timeInset*60:
