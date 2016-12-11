@@ -37,7 +37,7 @@ class Crawser(object):
         x = time.strftime('%H%M', x)
 
         if int(x) < 907:
-            return 0
+            print '--------------------------->'
 
 
         sql = "select {0} from {1} order by {2} limit 1".format(CF.HISTIME, CF.HISTAB, CF.HISQI)
@@ -52,8 +52,8 @@ class Crawser(object):
         return 0
 
     def crawser_index(self):
-        DBC.CreateTableHistoryIfNotEXist()
         if self.judge_need_crawser() == 1 :
+            DBC.CreateTableHistoryIfNotEXist()
             result = NM.web_getcontent(crawser_url)
             sss = json.loads(result)
             rows = sss['rows']
