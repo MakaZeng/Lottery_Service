@@ -34,7 +34,7 @@ class Yuce(object):
 
     def calculateHistoryYuce(self):
         print '===========>calculateHistory<=================='
-        sql = "select {0},{1},{2},{3},{4},{5} from {6} where {7} == 0;".format(DBC.BLID,DBC.BLROAD,DBC.BLNUMBER,DBC.BLMONEY,DBC.BLPERSON,DBC.BLQI,DBC.BLTAB,DBC.BLSTATUS)
+        sql = "select {0},{1},{2},{3},{4},{5} from {6} where {7} = 0;".format(DBC.BLID,DBC.BLROAD,DBC.BLNUMBER,DBC.BLMONEY,DBC.BLPERSON,DBC.BLQI,DBC.BLTAB,DBC.BLSTATUS)
         print sql
         result = DBM.maka_do_sql(sql)
         if not result:
