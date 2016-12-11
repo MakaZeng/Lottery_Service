@@ -56,7 +56,7 @@ class Yuce(object):
             for n in numbers.split(','):
                 if n==target:
                     isIn = 1
-            sql = "update beatlist set status = {0} where id = {1};".format(isIn,id)
+            sql = "update {2} set status = {0} where id = {1};".format(isIn,id,DBC.BLTAB)
             DBM.maka_do_sql(sql)
 
 
