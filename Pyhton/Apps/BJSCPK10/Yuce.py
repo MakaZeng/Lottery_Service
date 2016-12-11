@@ -35,6 +35,8 @@ class Yuce(object):
     def calculateHistoryYuce(self):
         sql = "select {0},{1},{2},{3},{4},{5} from {6} where {7} == 0;".format(DBC.BLID,DBC.BLROAD,DBC.BLNUMBER,DBC.BLMONEY,DBC.BLPERSON,DBC.BLQI,DBC.BLTAB,DBC.BLSTATUS)
         result = DBM.maka_do_sql(sql)
+        if not result:
+            return
         for line in result:
             road = line['road']
             numbers = line['numbers']

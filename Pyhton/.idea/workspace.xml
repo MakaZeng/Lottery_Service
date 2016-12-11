@@ -40,7 +40,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Crawser.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Crawser.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Apps/BJSCPK10/Crawser.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="498">
@@ -102,11 +102,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Yuce.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Yuce.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Apps/BJSCPK10/Yuce.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="480">
-              <caret line="32" column="69" selection-start-line="32" selection-start-column="69" selection-end-line="32" selection-end-column="69" />
+            <state relative-caret-position="390">
+              <caret line="38" column="18" selection-start-line="38" selection-start-column="18" selection-end-line="38" selection-end-column="18" />
               <folding />
             </state>
           </provider>
@@ -172,10 +172,10 @@
         <option value="$PROJECT_DIR$/Apps/XYNC/DatabaseCreator.py" />
         <option value="$PROJECT_DIR$/timer_run.py" />
         <option value="$PROJECT_DIR$/Apps/BJSCPK10/CalculateManager.py" />
-        <option value="$PROJECT_DIR$/Apps/BJSCPK10/Yuce.py" />
         <option value="$PROJECT_DIR$/Apps/BJSCPK10/TouzhuController.py" />
         <option value="$PROJECT_DIR$/Apps/BJSCPK10/UserController.py" />
         <option value="$PROJECT_DIR$/Apps/BJSCPK10/Crawser.py" />
+        <option value="$PROJECT_DIR$/Apps/BJSCPK10/Yuce.py" />
       </list>
     </option>
   </component>
@@ -872,14 +872,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Apps/BJSCPK10/Yuce.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="32" column="69" selection-start-line="32" selection-start-column="69" selection-end-line="32" selection-end-column="69" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Apps/BJSCPK10/TouzhuController.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
@@ -918,6 +910,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="498">
           <caret line="52" column="27" selection-start-line="52" selection-start-column="27" selection-end-line="52" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Apps/BJSCPK10/Yuce.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="38" column="18" selection-start-line="38" selection-start-column="18" selection-end-line="38" selection-end-column="18" />
           <folding />
         </state>
       </provider>
