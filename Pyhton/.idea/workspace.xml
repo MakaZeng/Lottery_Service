@@ -40,11 +40,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Crawser.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Crawser.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Apps/BJSCPK10/Crawser.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="495">
-              <caret line="50" column="12" selection-start-line="50" selection-start-column="12" selection-end-line="50" selection-end-column="12" />
+              <caret line="50" column="0" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -92,11 +92,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Yuce.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Yuce.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Apps/BJSCPK10/Yuce.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="465">
-              <caret line="31" column="30" selection-start-line="31" selection-start-column="30" selection-end-line="31" selection-end-column="30" />
+            <state relative-caret-position="195">
+              <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -173,16 +173,16 @@
         <option value="$PROJECT_DIR$/Apps/XYNC/MysqlDBConfig.py" />
         <option value="$PROJECT_DIR$/Apps/XYNC/DatabaseCreator.py" />
         <option value="$PROJECT_DIR$/timer_run.py" />
-        <option value="$PROJECT_DIR$/Apps/BJSCPK10/Yuce.py" />
         <option value="$PROJECT_DIR$/Apps/BJSCPK10/TouzhuController.py" />
         <option value="$PROJECT_DIR$/Apps/BJSCPK10/CalculateManager.py" />
         <option value="$PROJECT_DIR$/Apps/BJSCPK10/Crawser.py" />
+        <option value="$PROJECT_DIR$/Apps/BJSCPK10/Yuce.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="6" />
-    <option name="y" value="498" />
+    <option name="x" value="168" />
+    <option name="y" value="104" />
     <option name="width" value="1360" />
     <option name="height" value="877" />
   </component>
@@ -491,7 +491,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="6" y="498" width="1360" height="877" extended-state="0" />
+    <frame x="168" y="104" width="1360" height="877" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1882353" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -880,14 +880,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Apps/BJSCPK10/Yuce.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="31" column="30" selection-start-line="31" selection-start-column="30" selection-end-line="31" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Apps/BJSCPK10/CalculateManager.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-165">
@@ -901,7 +893,15 @@
     <entry file="file://$PROJECT_DIR$/Apps/BJSCPK10/Crawser.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="495">
-          <caret line="50" column="12" selection-start-line="50" selection-start-column="12" selection-end-line="50" selection-end-column="12" />
+          <caret line="50" column="0" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Apps/BJSCPK10/Yuce.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
           <folding />
         </state>
       </provider>

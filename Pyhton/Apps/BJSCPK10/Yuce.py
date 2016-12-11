@@ -4,12 +4,12 @@ reload(sys)
 sys.setdefaultencoding('utf8')
 import CalculateManager as CM
 import Dao.MysqlDBManager as DBM
-import Dao.MysqlDBConfig as DBC
+import MysqlDBConfig as DBC
 import random
 import time
 import Util.DateUtil as DU
 import TouzhuController as TZ
-import Dao.DatabaseCreator as CREATOR
+import DatabaseCreator as CREATOR
 import UserController as USERCONTROLLER
 
 class Yuce(object):
