@@ -46,7 +46,7 @@ class Crawser(object):
         print  lastTime
         lastTimeSeconds = DU.date_to_time(lastTime)
         if current - lastTimeSeconds >= timeInset*60:
-            print 'time offset > 5 minite'
+            print 'time offset > 5 minite : {0} = {1}'.format(lastTimeSeconds,current)
             return 1
 
         return 0
