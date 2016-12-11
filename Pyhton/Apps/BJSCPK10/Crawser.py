@@ -18,6 +18,9 @@ import json
 import Util.DateUtil as DU
 import demjson
 
+timeInset = 5
+beginTime = '09:07'
+endTime = '23:57'
 
 crawser_url = "http://www.cp098.com/pk10/getHistoryData?count=1&t=0.5354527991439386"
 
@@ -27,7 +30,26 @@ class Crawser(object):
 
     #判断是否需要抓取
     def judge_need_crawser(self):
-        return 1
+
+        current = time.time()
+        current = float(current)
+        x = time.localtime(current)
+        x = time.strftime('%H%M', x)
+
+        if int(x) < 907:
+            return 0
+
+
+        sql = "select {0} from {1} order by {2} limit 1".format(CF.HISTIME, CF.HISTAB, CF.HISQI)
+        result = DBM.maka_do_sql(sql)
+        lastTime = result[0]
+        print  lastTime
+        lastTimeSeconds = DU.date_to_time(lastTime)
+        if current - lastTimeSeconds >= timeInset*60:
+            print 'time offset > 5 minite'
+            return 1
+
+        return 0
 
     def crawser_index(self):
         DBC.CreateTableHistoryIfNotEXist()
