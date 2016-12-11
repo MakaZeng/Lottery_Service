@@ -23,8 +23,8 @@
       <file leaf-file-name="Crawser.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Apps/BJSCPK10/Crawser.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="48" column="86" selection-start-line="48" selection-start-column="86" selection-end-line="48" selection-end-column="86" />
+            <state relative-caret-position="315">
+              <caret line="61" column="19" selection-start-line="61" selection-start-column="12" selection-end-line="61" selection-end-column="19" />
               <folding />
             </state>
           </provider>
@@ -459,13 +459,6 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/Apps/BJSCPK10/Crawser.py</url>
-          <line>51</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-      </breakpoints>
       <option name="time" value="3" />
     </breakpoint-manager>
     <watches-manager />
@@ -825,8 +818,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Apps/BJSCPK10/Crawser.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="48" column="86" selection-start-line="48" selection-start-column="86" selection-end-line="48" selection-end-column="86" />
+        <state relative-caret-position="315">
+          <caret line="61" column="19" selection-start-line="61" selection-start-column="12" selection-end-line="61" selection-end-column="19" />
           <folding />
         </state>
       </provider>
