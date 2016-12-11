@@ -57,6 +57,7 @@ class Yuce(object):
                 if n==target:
                     isIn = 1
             sql = "update {2} set status = {0} where id = {1};".format(isIn,id,DBC.BLTAB)
+            print sql
             DBM.maka_do_sql(sql)
 
 
