@@ -47,6 +47,7 @@ class Yuce(object):
             person = line[4]
             qishu = line[5]
             sql = "select * from history where qishu = {0};".format(qishu)
+            print sql
             result = DBM.maka_do_sql(sql)
             print '8080808080808088080808080808'
             print result
