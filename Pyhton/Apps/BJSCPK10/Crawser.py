@@ -74,6 +74,7 @@ class Crawser(object):
             time.sleep(1)
             yc =Yuce.Yuce()
             yc.startYuce()
+            print '>>>>>>>>>>>>>>>>>>>>>>yuce'
 
             DBC.CreateTableTongjiIfNotEXist()
             cm = CalculateManager.CalculateManager()
