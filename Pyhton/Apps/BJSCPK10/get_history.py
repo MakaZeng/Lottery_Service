@@ -1,65 +1,40 @@
 
-import CrawserManager
+import Dao.MysqlDBManager as MysqlDBManager
+import Network.NetworkManager as NetworkManager
 import time
-import DatabaseModule
+import MysqlDBConfig as CF
 from pyquery import PyQuery as pyq
 
-print "Start"
 
 startNumber = 0
-
 databaseStartNumber = 0
-
-databaseStartNumber = DatabaseModule.getDatabaseTopLine()
-
 databaseStartNumber = 591304
+startNumber = 591305
 
-sss = CrawserManager.pk10GetLaterestData('http://www.bwlc.net/bulletin/trax.html')
-if len(sss):
-	jq = pyq(sss)
-	li = jq(".tb td")
-	content = li[0]
-	print pyq(content).text()
-	arr =  pyq(content).text().split(' ')
-        qishu = arr[0]
-        print qishu
-        startNumber = int(qishu)
-	startNumber = 591305
-totalCount = 6000
+
 currentNumber = startNumber
 
-print startNumber,totalCount,databaseStartNumber
+url = 'http://www.bwlc.net/bulletin/prevtrax.html?num={0}'.format(currentNumber)
+content = NetworkManager.getcontent(url)
+if len(content):
+    jq = pyq(content)
+    content = jq('.tb td').text()
+    arr =  content.split(' ')
 
-while startNumber - currentNumber <= totalCount:
-	if currentNumber <= databaseStartNumber:
-		break
-	url = 'http://www.bwlc.net/bulletin/prevtrax.html?num={0}'.format(currentNumber)
-	print url
-	content = CrawserManager.crawserWithTarget(url)
-	if len(content):
-		jq = pyq(content)
-		content = jq('.tb td').text()
-		arr =  content.split(' ')
-        if len(arr)<3:
-		print 'none data'
-		url = 'http://bbs.zhcw.com/kaijiang/bjpk10/{0}.html'.format(currentNumber)
-		content = CrawserManager.pk10GetTargetData(url)
-		if(len(content)):
-			qishu = currentNumber
-                	numbers = content
-                	t = 'inset'
-                	DatabaseModule.writeToDatabaseWith(qishu,numbers,t)
-                	time.sleep(1)
-                	currentNumber -= 1
-		else:
-			time.sleep(120)
-	else:
-		qishu = arr[0]
-		numbers = arr[1]
-		t = arr[2]+' '+arr[3]
-		print qishu
-		DatabaseModule.writeToDatabaseWith(qishu,numbers,t)
-		time.sleep(1)
-		currentNumber -= 1
-else:
-	print('end----------')
+    qishu = arr[0]
+    row = arr[1].split(',')
+    shijian = arr[2] + ' ' + arr[3] + ':00'
+
+    sql = "INSERT INTO {0} ({1},{2},{3},{4},{5},{6},{7},{8},{9},{10},{11},{12}) VALUES ( \
+                '{13}','{14}','{15}','{16}','{17}','{18}','{19}','{20}','{21}','{22}','{23}','{24}');".format( \
+        CF.HISTAB, CF.HISQI, CF.HISTIME, CF.HISN1, CF.HISN2, CF.HISN3, CF.HISN4, CF.HISN5, CF.HISN6, CF.HISN7, CF.HISN8,
+        CF.HISN9, CF.HISN10, \
+        qishu, shijian, str(row[0]), str(row[1]), str(row[2]), str(row[3]), str(row[4]), str(row[5]),
+        str(row[6]), str(row[7]), str(row[8]), str(row[9]))
+    MysqlDBManager.maka_do_sql(sql)
+
+    time.sleep(1)
+    currentNumber -= 1
+
+else :
+    time.sleep(10)
