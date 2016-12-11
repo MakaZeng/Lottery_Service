@@ -40,7 +40,7 @@ class Yuce(object):
         if not result:
             return
         for line in result:
-            road = line[1]
+            road = int(line[1])
             numbers = line[2]
             beat = line[3]
             id = line[1]
