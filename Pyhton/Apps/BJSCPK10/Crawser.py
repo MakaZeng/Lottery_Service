@@ -38,7 +38,7 @@ class Crawser(object):
 
         if int(x) < 907:
             print '--------------------------->'
-            return 1
+            return 0
 
         sql = "select {0} from {1} order by {2} desc limit 1".format(CF.HISTIME, CF.HISTAB, CF.HISQI)
         result = DBM.maka_do_sql(sql)
@@ -64,6 +64,13 @@ class Crawser(object):
                 row['n5']) + ',' + str(row['n6']) + ',' + str(row['n7']) + ',' + str(row['n8']) + ',' + str(
                 row['n9']) + ',' + str(row['n10'])
             qishu = row['termNum']
+
+            sql = "select {0} from {1} order by {0} desc limit 1".format(CF.HISQI,CF.HISTAB)
+            result = DBM.maka_do_sql(sql)
+            databaseQishu = result[0][0]
+            if qishu <= databaseQishu :
+                print "data------> is Exist ........ "
+                return
 
             sql = "INSERT INTO {0} ({1},{2},{3},{4},{5},{6},{7},{8},{9},{10},{11},{12}) VALUES ( \
             '{13}','{14}','{15}','{16}','{17}','{18}','{19}','{20}','{21}','{22}','{23}','{24}');".format( \
