@@ -7,6 +7,8 @@ sys.setdefaultencoding('utf8')
 import Network.NetworkManager as NM
 import Dao.MysqlDBManager as DBM
 
+import Yuce as Yuce
+import CalculateManager as CalculateManager
 import MysqlDBConfig as CF
 import DatabaseCreator as DBC
 import sys
@@ -45,4 +47,18 @@ class Crawser(object):
             '{13}','{14}','{15}','{16}','{17}','{18}','{19}','{20}','{21}','{22}','{23}','{24}');".format( \
                 CF.HISTAB, CF.HISQI, CF.HISTIME, CF.HISN1, CF.HISN2, CF.HISN3, CF.HISN4, CF.HISN5,CF.HISN6, CF.HISN7, CF.HISN8, CF.HISN9, CF.HISN10, \
                 qishu, time, str(row['n1']), str(row['n2']), str(row['n3']), str(row['n4']), str(row['n5']), str(row['n6']), str(row['n7']), str(row['n8']), str(row['n9']),str(row['n10']))
+            DBM.maka_do_sql(sql)
+            
+            time.sleep(1)
+            yc =Yuce.Yuce()
+            yc.startYuce()
+
+            DBC.CreateTableTongjiIfNotEXist()
+            cm = CalculateManager.CalculateManager()
+            cm.calculate()
+            json = demjson.encode(cm.results)
+            sql = "DELETE FROM {0}.{1} WHERE {2} > 0;".format(CF.Database, CF.TJTAB, CF.TJQI)
+            DBM.maka_do_sql(sql)
+            sql = "INSERT INTO {0}.{1} ({2},{3}) VALUES ('{4}','{5}');".format(CF.Database, CF.TJTAB, CF.TJQI, CF.TJRS,
+                                                                               qishu, json)
             DBM.maka_do_sql(sql)
