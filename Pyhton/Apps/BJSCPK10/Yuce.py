@@ -43,7 +43,7 @@ class Yuce(object):
             road = int(line[1])
             numbers = line[2]
             beat = line[3]
-            id = line[1]
+            id = line[0]
             person = line[4]
             qishu = line[5]
             sql = "select * from {0} where {1} = {2};".format(DBC.HISTAB,DBC.HISQI,qishu)
