@@ -40,12 +40,12 @@ class Yuce(object):
         if not result:
             return
         for line in result:
-            road = line['road']
-            numbers = line['numbers']
-            beat = line['beat']
-            id = line['id']
-            person = line['personID']
-            qishu = line['qishu']
+            road = line[1]
+            numbers = line[2]
+            beat = line[3]
+            id = line[1]
+            person = line[4]
+            qishu = line[5]
             sql = "select * from history where qishu = {0};".format(qishu)
             result = DBM.maka_do_sql(sql)
             his = [result[DBC.HISN1],result[DBC.HISN2],result[DBC.HISN3],result[DBC.HISN4],result[DBC.HISN5],result[DBC.HISN6],result[DBC.HISN7],result[DBC.HISN8],result[DBC.HISN9],result[DBC.HISN10]]
