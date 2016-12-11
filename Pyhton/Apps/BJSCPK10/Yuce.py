@@ -27,8 +27,8 @@ class Yuce(object):
 
         persons = [100,101,102,103,104,105,106,107,108,109]
         names = ["菜鸟计划","山神计划","盖伦计划","宝贝计划","二狗计划","老马计划","必赢计划","莎莎计划","李仙人计划","白小姐计划"]
-	
-	self.calculateHistoryYuce()
+
+        self.calculateHistoryYuce()
         for person in persons:
             self.getTouzhuForPerson(person,names[person - 100],qishu)
 
@@ -61,13 +61,12 @@ class Yuce(object):
         result = DBM.maka_do_sql(sql)
         if not result:
             result = USERCONTROLLER.inertPersonWith(person,name,name)
-            print result
         else:
             tuple = result[0]
             touzhu = self.getRandom()
 
             currentTime = long(time.time())
-            currentTime = DU.convertSecondsFrom1970ToDate(currentTime)
+            currentTime = DU.time_to_date(currentTime)
 
             numbers = touzhu['numbers']
             numbers = ','.join(numbers)

@@ -56,9 +56,10 @@ class Crawser(object):
             DBC.CreateTableTongjiIfNotEXist()
             cm = CalculateManager.CalculateManager()
             cm.calculate()
+
             jso = demjson.encode(cm.results)
-            sql = "DELETE FROM {0}.{1} WHERE {2} > 0;".format(CF.Database, CF.TJTAB, CF.TJQI)
+            sql = "DELETE FROM {0} WHERE {1} > 0;".format(CF.TJTAB, CF.TJQI)
             DBM.maka_do_sql(sql)
-            sql = "INSERT INTO {0}.{1} ({2},{3}) VALUES ('{4}','{5}');".format(CF.Database, CF.TJTAB, CF.TJQI, CF.TJRS,
+            sql = "INSERT INTO {0} ({1},{2}) VALUES ('{3}','{4}');".format(CF.TJTAB, CF.TJQI, CF.TJRS,
                                                                                qishu, jso)
             DBM.maka_do_sql(sql)
