@@ -71,6 +71,7 @@ class Crawser(object):
                 qishu, shijian, str(row['n1']), str(row['n2']), str(row['n3']), str(row['n4']), str(row['n5']), str(row['n6']), str(row['n7']), str(row['n8']), str(row['n9']),str(row['n10']))
             DBM.maka_do_sql(sql)
 
+            print '====================================='
             time.sleep(1)
             yc =Yuce.Yuce()
             yc.startYuce()
