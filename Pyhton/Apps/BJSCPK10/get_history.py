@@ -13,8 +13,8 @@ from pyquery import PyQuery as pyq
 
 startNumber = 0
 databaseStartNumber = 0
-databaseStartNumber = 591304
-startNumber = 591305
+databaseStartNumber = 0
+startNumber = 591461
 
 
 currentNumber = startNumber
