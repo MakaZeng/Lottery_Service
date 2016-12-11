@@ -48,6 +48,8 @@ class Yuce(object):
             qishu = line[5]
             sql = "select * from history where qishu = {0};".format(qishu)
             result = DBM.maka_do_sql(sql)
+            print '8080808080808088080808080808'
+            print result
             his = [result[2],result[3],result[4],result[5],result[6],result[7],result[8],result[9],result[10],result[11]]
             target = his[road-1]
             isIn = 2
