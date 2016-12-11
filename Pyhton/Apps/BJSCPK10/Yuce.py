@@ -48,7 +48,7 @@ class Yuce(object):
             qishu = line[5]
             sql = "select * from history where qishu = {0};".format(qishu)
             result = DBM.maka_do_sql(sql)
-            his = [result[DBC.HISN1],result[DBC.HISN2],result[DBC.HISN3],result[DBC.HISN4],result[DBC.HISN5],result[DBC.HISN6],result[DBC.HISN7],result[DBC.HISN8],result[DBC.HISN9],result[DBC.HISN10]]
+            his = [result[2],result[3],result[4],result[5],result[6],result[7],result[8],result[9],result[10],result[11]]
             target = his[road-1]
             isIn = 2
             for n in numbers.split(','):
