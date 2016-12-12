@@ -38,16 +38,17 @@ class Crawser(object):
             print '--------------------------->'
             return 0
 
+        currentInset = timeInset
         if int(x) > 1000 and int(x) < 2200:
-            timeInset = 10
+            currentInset = 10
 
         sql = "select {0} from {1} order by {2} desc limit 1".format(CF.HISTIME, CF.HISTAB, CF.HISQI)
         result = DBM.maka_do_sql(sql)
         lastTime = result[0][0]
         print  lastTime
         lastTimeSeconds = DU.date_to_time(lastTime)
-        if current - lastTimeSeconds >= timeInset * 60:
-            print 'time offset > {2} minite : {0} = {1}'.format(lastTimeSeconds, current,timeInset)
+        if current - lastTimeSeconds >= currentInset * 60:
+            print 'time offset > {2} minite : {0} = {1}'.format(lastTimeSeconds, current,currentInset)
             return 1
         return 0
 
