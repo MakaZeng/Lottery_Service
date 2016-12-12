@@ -75,7 +75,7 @@ class Crawser(object):
             sql = "INSERT INTO {0} ({1},{2},{3},{4},{5},{6},{7}) VALUES ( \
                         '{8}','{9}',{10},{11},{12},{13},{14});".format( \
                 CF.HISTAB, CF.HISQI, CF.HISTIME, CF.HISN1, CF.HISN2, CF.HISN3, CF.HISN4, CF.HISN5, \
-                qishu, time, str(row['n1']), str(row['n2']), str(row['n3']), str(row['n4']), str(row['n5']))
+                qishu, shijian, str(row['n1']), str(row['n2']), str(row['n3']), str(row['n4']), str(row['n5']))
             print sql
             DBM.maka_do_sql(sql)
 
