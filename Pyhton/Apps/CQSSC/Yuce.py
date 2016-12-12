@@ -3,12 +3,12 @@ import sys
 reload(sys)
 sys.setdefaultencoding('utf8')
 import Dao.MysqlDBManager as DBM
-import Apps.BJSCPK10.MysqlDBConfig as DBC
+import MysqlDBConfig as DBC
 import random
 import time
 import UserController as UserController
 import Util.DateUtil as DU
-import Apps.BJSCPK10.DatabaseCreator as CREATOR
+import DatabaseCreator as CREATOR
 
 
 class Yuce(object):

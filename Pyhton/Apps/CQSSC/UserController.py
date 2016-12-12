@@ -2,7 +2,7 @@
 import sys
 reload(sys)
 sys.setdefaultencoding('utf8')
-import Apps.BJSCPK10.MysqlDBConfig as DBC
+import MysqlDBConfig as DBC
 import Dao.MysqlDBManager as DBM
 
 def inertPersonWith(personID,name,device):

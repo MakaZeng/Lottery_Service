@@ -1,4 +1,4 @@
-import Apps.BJSCPK10.MysqlDBConfig as DBC
+import MysqlDBConfig as DBC
 import Dao.MysqlDBManager as DBM
 import demjson
 

@@ -7,8 +7,8 @@ sys.setdefaultencoding('utf8')
 import Network.NetworkManager as NM
 import Dao.MysqlDBManager as DBM
 
-from Apps.BJSCPK10 import Yuce as Yuce
-import Apps.BJSCPK10.CalculateManager as CalculateManager
+import Yuce as Yuce
+import CalculateManager as CalculateManager
 import MysqlDBConfig as CF
 import DatabaseCreator as DBC
 import time

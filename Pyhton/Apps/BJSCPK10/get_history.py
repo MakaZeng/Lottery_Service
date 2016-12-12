@@ -7,7 +7,7 @@ sys.setdefaultencoding('utf8')
 import Network.NetworkManager as NM
 import Dao.MysqlDBManager as DBM
 import time
-import Apps.BJSCPK10.MysqlDBConfig as CF
+import MysqlDBConfig as CF
 from pyquery import PyQuery as pyq
 
 
