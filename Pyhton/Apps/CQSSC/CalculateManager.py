@@ -18,7 +18,7 @@ class CalculateManager(object):
         if len(self.dataList) == 0:
             print 'ERROR database is empty'
         else:
-            for i in range(1,10+2+1):
+            for i in range(1,5+1):
                 targetArray = []
                 targetDictionary = {str(i):targetArray}
                 self.calculateSourceArray(self.dataList,targetDictionary, i);
@@ -27,28 +27,12 @@ class CalculateManager(object):
 
     def chanceArrayForType(self,type):
         chanceArray = []
-        if type == 11 :
-            chanceArray = [1.0 / 45, 1.0 / 45, 1.0 / 22.5, 1.0 / 22.5, 1.0 / 15, 1.0 / 15, 1.0 / 11.25, 1.0 / 11.25,
-                           1.0 / 9, 1.0 / 11.25, 1.0 / 11.25, 1.0 / 15, 1.0 / 15, 1.0 / 22.5, 1.0 / 22.5, 1.0 / 45,
-                           1.0 / 45]
-        elif type == 12 :
-            chanceArray = [1.0 / 120, 1.0 / 120, 1.0 / 60, 1.0 / 40, 1.0 / 30, 1.0 / 24, 1.0 / 17.15, 1.0 / 15,
-                           1.0 / 13.33, 1.0 / 12, 1.0 / 12, 1.0 / 12, 1.0 / 12, 1.0 / 13.33, 1.0 / 15, 1.0 / 17.15,
-                           1.0 / 24 , 1.0 / 30 , 1.0 / 40 , 1.0 / 60 ,1.0 / 120,1.0 / 120]
-        else :
-            chanceArray = [.1,.1,.1,.1,.1,.1,.1,.1,.1,.1]
-
+        chanceArray = [ .1, .1, .1, .1, .1, .1, .1, .1, .1, .1]
         return chanceArray
 
     def calculateChanceForNumberAndType(self,number,type):
-        beginNumber = 1
-        endNumber = 10
-        if type == 11 :
-            beginNumber = 3
-            endNumber = 19
-        elif type == 12 :
-            beginNumber = 6
-            endNumber = 27
+        beginNumber = 0
+        endNumber = 9
 
         chanceArray = self.chanceArrayForType(type)
         return chanceArray[number - beginNumber]
@@ -58,16 +42,8 @@ class CalculateManager(object):
         targetArray = targetDictionary[str(type)]
 
         inset = 4
-        beginNumber = 1
-        endNumber = 10+inset
-
-        if type == 11:
-            beginNumber = 3
-            endNumber = 19+inset
-
-        if type == 12:
-            beginNumber =6
-            endNumber = 27+inset
+        beginNumber = 0
+        endNumber = 9+inset
 
         for i in range(beginNumber,endNumber+1):
             ddd = {}
@@ -90,16 +66,6 @@ class CalculateManager(object):
             numbers.append(temp)
             temp = int(model[6])
             numbers.append(temp)
-            temp = int(model[7])
-            numbers.append(temp)
-            temp = int(model[8])
-            numbers.append(temp)
-            temp = int(model[9])
-            numbers.append(temp)
-            temp = int(model[10])
-            numbers.append(temp)
-            temp = int(model[11])
-            numbers.append(temp)
 
             if type == 1:
                 count = numbers[0]
@@ -111,22 +77,9 @@ class CalculateManager(object):
                 count = numbers[3]
             elif type == 5:
                 count = numbers[4]
-            elif type == 6:
-                count = numbers[5]
-            elif type == 7:
-                count = numbers[6]
-            elif type == 8:
-                count = numbers[7]
-            elif type == 9:
-                count = numbers[8]
-            elif type == 10:
-                count = numbers[9]
-            elif type == 11:
-                count = numbers[0]+numbers[1]
-            elif type == 12:
-                count = numbers[0]+numbers[1]+numbers[2]
             else:
                 count = 0
+
             dic = targetArray[int(count) - int(beginNumber) + inset];
             if not (dic.has_key('title')):
                 dic['title'] = count

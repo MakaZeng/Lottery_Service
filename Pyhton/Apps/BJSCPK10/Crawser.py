@@ -7,13 +7,11 @@ sys.setdefaultencoding('utf8')
 import Network.NetworkManager as NM
 import Dao.MysqlDBManager as DBM
 
-import Yuce as Yuce
-import CalculateManager as CalculateManager
+from Apps.BJSCPK10 import Yuce as Yuce
+import Apps.BJSCPK10.CalculateManager as CalculateManager
 import MysqlDBConfig as CF
 import DatabaseCreator as DBC
-import sys
 import time
-import re
 import json
 import Util.DateUtil as DU
 import demjson
@@ -80,7 +78,7 @@ class Crawser(object):
 
             print '====================================='
             time.sleep(1)
-            yc =Yuce.Yuce()
+            yc = Yuce.Yuce()
             yc.startYuce()
             print '>>>>>>>>>>>>>>>>>>>>>>yuce'
 
