@@ -43,7 +43,7 @@ class Crawser(object):
 
         print result
 
-        if result.count == 0:
+        if len(result) == 0:
             return 1
 
         lastTime = result[0][0]
