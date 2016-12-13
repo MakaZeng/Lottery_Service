@@ -35,7 +35,7 @@ class Crawser(object):
         x = time.localtime(current)
         x = time.strftime('%H%M', x)
 
-        if int(x) < 1002 and int(x) > 202:
+        if int(x) < 1002 and int(x) > 207:
             print  '幸运农场 =======>  当前时间不需要抓取 -----'
             return 0
 

@@ -34,7 +34,7 @@ class Crawser(object):
         x = time.localtime(current)
         x = time.strftime('%H%M', x)
 
-        if int(x) < 840 | int(x) > 2210:
+        if int(x) < 840 | int(x) > 2215:
             print  '江苏快三 =======>  当前时间不需要抓取 -----'
             return 0
 
