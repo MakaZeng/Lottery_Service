@@ -20,11 +20,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Crawser.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Crawser.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Apps/BJSCPK10/Crawser.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="276">
-              <caret line="43" column="20" selection-start-line="43" selection-start-column="20" selection-end-line="43" selection-end-column="20" />
+              <caret line="43" column="8" selection-start-line="43" selection-start-column="8" selection-end-line="43" selection-end-column="20" />
               <folding />
             </state>
           </provider>
@@ -100,11 +100,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Crawser.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Crawser.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Apps/CQSSC/Crawser.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="300">
-              <caret line="43" column="8" selection-start-line="43" selection-start-column="8" selection-end-line="44" selection-end-column="20" />
+              <caret line="43" column="20" selection-start-line="43" selection-start-column="20" selection-end-line="43" selection-end-column="20" />
               <folding />
             </state>
           </provider>
@@ -173,7 +173,6 @@
         <option value="$PROJECT_DIR$/Apps/TJSSC/Yuce.py" />
         <option value="$PROJECT_DIR$/Apps/XJSSC/Yuce.py" />
         <option value="$PROJECT_DIR$/Apps/XYNC/Yuce.py" />
-        <option value="$PROJECT_DIR$/Apps/CQSSC/Crawser.py" />
         <option value="$PROJECT_DIR$/Apps/GDKLSF/Crawser.py" />
         <option value="$PROJECT_DIR$/Apps/GDSYXW/Crawser.py" />
         <option value="$PROJECT_DIR$/Apps/JSKS/Crawser.py" />
@@ -183,6 +182,7 @@
         <option value="$PROJECT_DIR$/Apps/XYNC/Crawser.py" />
         <option value="$PROJECT_DIR$/Apps/BJSCPK10/Yuce.py" />
         <option value="$PROJECT_DIR$/Apps/BJSCPK10/Crawser.py" />
+        <option value="$PROJECT_DIR$/Apps/CQSSC/Crawser.py" />
       </list>
     </option>
   </component>
@@ -1022,14 +1022,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Apps/CQSSC/Crawser.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="43" column="8" selection-start-line="43" selection-start-column="8" selection-end-line="44" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Apps/GDKLSF/Crawser.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="282">
@@ -1105,6 +1097,14 @@
     <entry file="file://$PROJECT_DIR$/Apps/BJSCPK10/Crawser.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="276">
+          <caret line="43" column="8" selection-start-line="43" selection-start-column="8" selection-end-line="43" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Apps/CQSSC/Crawser.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
           <caret line="43" column="20" selection-start-line="43" selection-start-column="20" selection-end-line="43" selection-end-column="20" />
           <folding />
         </state>
