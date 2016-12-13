@@ -48,7 +48,7 @@ class Yuce(object):
             sql = "select * from {0} where {1} = '{2}';".format(DBC.HISTAB,DBC.HISQI,qishu)
             result = DBM.maka_do_sql(sql)
             result = result[0]
-            his = [result[2],result[3],result[4],result[5],result[6],result[7],result[8],result[9],result[10],result[11]]
+            his = [result[2],result[3],result[4],result[5],result[6],result[7],result[8],result[9]]
             target = his[road-1]
             isIn = 2
             for n in numbers.split(','):
