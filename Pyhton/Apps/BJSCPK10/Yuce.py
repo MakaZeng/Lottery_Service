@@ -91,4 +91,4 @@ class Yuce(object):
         random.shuffle(roads)
         random.shuffle(beats)
         random.seed(time.time())
-        return {'numbers':numbers[0:random.randint(3,5)],'road':roads[0],'beat':beats[0]}
+        return {'numbers':numbers[0:random.randint(8,9)],'road':roads[0],'beat':beats[0]}
