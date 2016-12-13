@@ -68,6 +68,11 @@ class Crawser(object):
         if self.judge_need_crawser() == 1 :
             DBC.CreateTableHistoryIfNotEXist()
             result = NM.web_getcontent(crawser_url)
+
+            if len(result) == 0:
+                return
+
+
             sss = json.loads(result)
             rows = sss['rows']
             row = rows[0]
