@@ -61,6 +61,7 @@ class CalculateManager(object):
             temp = int(model[3])
             numbers.append(temp)
             temp = int(model[4])
+            numbers.append(temp)
 
             if type == 1:
                 count = numbers[0]
