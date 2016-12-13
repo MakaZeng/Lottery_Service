@@ -61,7 +61,7 @@ class Yuce(object):
 
 
     def getTouzhuForPerson(self,person,name,qishu):
-        sql = "select * from {0} where {1} = '{2}';".format(DBC.PSTAB,DBC.PSID,person)
+        sql = "select * from {0} where {1} = {2};".format(DBC.PSTAB,DBC.PSID,person)
         result = DBM.maka_do_sql(sql)
         if not result:
             result = UserController.inertPersonWith(person, name, name)
