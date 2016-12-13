@@ -34,8 +34,8 @@ class Crawser(object):
         x = time.localtime(current)
         x = time.strftime('%H%M', x)
 
-        if int(x) < 907:
-            print '--------------------------->'
+        if int(x) < 907 :
+            print  '=======>  当前时间不需要抓取 -----'
             return 0
 
         sql = "select {0} from {1} order by {2} desc limit 1".format(CF.HISTIME, CF.HISTAB, CF.HISQI)
@@ -44,12 +44,15 @@ class Crawser(object):
         print  lastTime
         lastTimeSeconds = DU.date_to_time(lastTime)
         if current - lastTimeSeconds >= timeInset*60:
-            print 'time offset > 5 minite : {0} = {1}'.format(lastTimeSeconds,current)
+            print '***********需要抓取********** {0} {1} *****'.format(lastTimeSeconds,current)
             return 1
 
         return 0
 
     def crawser_index(self):
+
+        print  '北京赛车 -----------> 开始抓取'
+
         if self.judge_need_crawser() == 1 :
             DBC.CreateTableHistoryIfNotEXist()
             result = NM.web_getcontent(crawser_url)
@@ -67,7 +70,7 @@ class Crawser(object):
             result = DBM.maka_do_sql(sql)
             databaseQishu = result[0][0]
             if qishu <= databaseQishu :
-                print "data------> is Exist ........ "
+                print  '&&&&&&&&&&&&&&& 抓取的数据在数据库中已存在 &&&&&&&&&&&&&'
                 return
 
             sql = "INSERT INTO {0} ({1},{2},{3},{4},{5},{6},{7},{8},{9},{10},{11},{12}) VALUES ( \
@@ -76,19 +79,24 @@ class Crawser(object):
                 qishu, shijian, str(row['n1']), str(row['n2']), str(row['n3']), str(row['n4']), str(row['n5']), str(row['n6']), str(row['n7']), str(row['n8']), str(row['n9']),str(row['n10']))
             DBM.maka_do_sql(sql)
 
-            print '====================================='
+            print  '########## 插入SQL:'+sql+' ############'
+
             time.sleep(1)
+            print '-------进入预测-------'
             yc = Yuce.Yuce()
             yc.startYuce()
-            print '>>>>>>>>>>>>>>>>>>>>>>yuce'
 
+            print '-------进入统计-------'
             DBC.CreateTableTongjiIfNotEXist()
             cm = CalculateManager.CalculateManager()
             cm.calculate()
 
+            print '-------删除原统计数据---------'
             jso = demjson.encode(cm.results)
             sql = "DELETE FROM {0} WHERE {1} > 0;".format(CF.TJTAB, CF.TJQI)
             DBM.maka_do_sql(sql)
+
+            print '^^^^^^^^^^^插入新的统计^^^^^^^^^^^'
             sql = "INSERT INTO {0} ({1},{2}) VALUES ('{3}','{4}');".format(CF.TJTAB, CF.TJQI, CF.TJRS,
                                                                                qishu, jso)
             DBM.maka_do_sql(sql)

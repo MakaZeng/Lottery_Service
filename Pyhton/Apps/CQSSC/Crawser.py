@@ -34,22 +34,24 @@ class Crawser(object):
         x = time.localtime(current)
         x = time.strftime('%H%M', x)
 
-        if int(x) > 155 and int(x) < 1000:
-            print '--------------------------->'
+        if int(x) < 1000 and int(x) > 160:
+            print  '=======>  当前时间不需要抓取 -----'
             return 0
-
-        currentInset = timeInset
-        if int(x) > 1000 and int(x) < 2200:
-            currentInset = 10
 
         sql = "select {0} from {1} order by {2} desc limit 1".format(CF.HISTIME, CF.HISTAB, CF.HISQI)
         result = DBM.maka_do_sql(sql)
         lastTime = result[0][0]
         print  lastTime
         lastTimeSeconds = DU.date_to_time(lastTime)
+
+        currentInset = timeInset
+        if int(x) > 1000 and int(x) < 2200:
+            currentInset = 10
+
         if current - lastTimeSeconds >= currentInset * 60:
-            print 'time offset > {2} minite : {0} = {1}'.format(lastTimeSeconds, current,currentInset)
+            print '***********需要抓取********** {0} {1} *****'.format(lastTimeSeconds, current)
             return 1
+
         return 0
 
     def crawser_index(self):
