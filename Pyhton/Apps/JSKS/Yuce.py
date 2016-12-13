@@ -35,7 +35,7 @@ class Yuce(object):
         print '===============>进行历史数据结算<=================='
         sql = "select {0},{1},{2},{3},{4},{5} from {6} where {7} = 0;".format(DBC.BLID,DBC.BLROAD,DBC.BLNUMBER,DBC.BLMONEY,DBC.BLPERSON,DBC.BLQI,DBC.BLTAB,DBC.BLSTATUS)
         result = DBM.maka_do_sql(sql)
-        if not result[0]:
+        if result.count == 0:
             print '^^^^^^^^^^^^^^^^^^^^结算完成^^^^^^^^^^^^^^^^^^^^^^^^^'
             return
         for line in result:
@@ -63,7 +63,7 @@ class Yuce(object):
     def getTouzhuForPerson(self,person,name,qishu):
         sql = "select * from {0} where {1} = {2};".format(DBC.PSTAB,DBC.PSID,person)
         result = DBM.maka_do_sql(sql)
-        if not result[0]:
+        if result.count == 0:
             result = UserController.inertPersonWith(person, name, name)
             print '~~~~~~~~~~~~~~~~~~ 插入用户 ~~~~~~~~~~~~~~~~~~~~~~'
         else:
