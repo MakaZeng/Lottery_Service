@@ -42,7 +42,7 @@ class Crawser(object):
         sql = "select {0} from {1} order by {2} desc limit 1".format(CF.HISTIME, CF.HISTAB, CF.HISQI)
         result = DBM.maka_do_sql(sql)
 
-        if result.count == 0:
+        if len(result) == 0:
             return 1
 
         lastTime = result[0][0]
@@ -71,9 +71,13 @@ class Crawser(object):
                 row['n5']) + ',' + str(row['n6']) + ',' + str(row['n7']) + ',' + str(row['n8'])
             qishu = row['termNum']
 
-            sql = "select {0} from {1} order by {0} desc limit 1".format(CF.HISQI,CF.HISTAB)
+            sql = "select {0} from {1} order by {0} desc limit 1".format(CF.HISQI, CF.HISTAB)
             result = DBM.maka_do_sql(sql)
-            databaseQishu = result[0][0]
+            databaseQishu = '0'
+            if len(result) > 0:
+                databaseQishu = result[0][0]
+
+
             if qishu <= databaseQishu :
                 print  '快乐十分 &&&&&&&&&&&&&&& 抓取的数据在数据库中已存在 &&&&&&&&&&&&&'
                 return

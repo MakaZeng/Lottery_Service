@@ -76,9 +76,12 @@ class Crawser(object):
                 row['n5'])
             qishu = row['termNum']
 
-            sql = "select {0} from {1} order by {0} desc limit 1".format(CF.HISQI,CF.HISTAB)
+            sql = "select {0} from {1} order by {0} desc limit 1".format(CF.HISQI, CF.HISTAB)
             result = DBM.maka_do_sql(sql)
-            databaseQishu = result[0][0]
+            databaseQishu = '0'
+            if len(result) > 0:
+                databaseQishu = result[0][0]
+
             if qishu <= databaseQishu :
                 print  '重庆时时彩 &&&&&&&&&&&&&&& 抓取的数据在数据库中已存在 &&&&&&&&&&&&&'
                 return
