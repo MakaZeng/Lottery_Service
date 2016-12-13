@@ -84,8 +84,8 @@ class Yuce(object):
 
 
     def getRandom(self):
-        numbers = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10']
-        roads = [1, 2, 3, 4, 5]
+        numbers = ['1', '2', '3', '4', '5', '6']
+        roads = [1, 2, 3]
         beats = [100, 200, 500, 1000, 2000]
         random.shuffle(numbers)
         random.shuffle(roads)
