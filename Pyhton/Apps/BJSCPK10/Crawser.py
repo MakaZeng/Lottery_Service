@@ -41,6 +41,8 @@ class Crawser(object):
         sql = "select {0} from {1} order by {2} desc limit 1".format(CF.HISTIME, CF.HISTAB, CF.HISQI)
         result = DBM.maka_do_sql(sql)
 
+        print result
+
         if result.count == 0:
             return 1
 
