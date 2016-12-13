@@ -65,7 +65,7 @@ class Yuce(object):
         result = DBM.maka_do_sql(sql)
         if not result:
             result = UserController.inertPersonWith(person, name, name)
-            print '~~~~~~~~~~~~~~~~~~ 插入用户+' ~~~~~~~~~~~~~~~~~~~~~~'
+            print '~~~~~~~~~~~~~~~~~~ 插入用户 ~~~~~~~~~~~~~~~~~~~~~~'
         else:
             tuple = result[0]
             touzhu = self.getRandom()
@@ -80,7 +80,7 @@ class Yuce(object):
             .format(DBC.BLTAB,DBC.BLQI,DBC.BLTIME,DBC.BLROAD,DBC.BLNUMBER,DBC.BLMONEY,DBC.BLSTATUS,DBC.BLPERSON, \
             qishu,currentTime,str(touzhu['road']),numbers,touzhu['beat'],0,person)
             DBM.maka_do_sql(sql)
-            print '用户预测完成------------------------------------
+            print '用户预测完成------------------------------------'
 
 
     def getRandom(self):
