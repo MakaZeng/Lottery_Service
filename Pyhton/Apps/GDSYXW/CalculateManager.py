@@ -66,8 +66,6 @@ class CalculateManager(object):
             numbers.append(temp)
             temp = int(model[6])
             numbers.append(temp)
-            temp = int(model[7])
-            numbers.append(temp)
 
             if type == 1:
                 count = numbers[0]
@@ -79,8 +77,6 @@ class CalculateManager(object):
                 count = numbers[3]
             elif type == 5:
                 count = numbers[4]
-            elif type == 6:
-                count = numbers[5]
             else:
                 count = 0
             dic = targetArray[int(count) - int(beginNumber) + inset];
